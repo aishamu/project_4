@@ -1,0 +1,29 @@
+
+<center>
+<div class="container">
+<div class="jumbotron">
+
+<h1> index products</h1>
+ 
+<div class="form-row">
+<div class="col-md-6 mb-3">
+<% @product.each do |product| %>
+    <div class="well">
+       <h3>Product Name <%= product.productname %></h3>
+       <p>Image <%= product.image %></p>
+       <p>Panda Price <%= product.PandaPrice %></p>
+       <p>Danub Price <%= product.DanubPrice %></p>
+       <p>Manual Price <%= product.ManualPrice %></p>
+
+       
+       <%= link_to "read more" , product_path(product), :class => 'btn btn-default' %>
+   </div>
+  
+       <% end %>  </div>
+
+   
+       </div>
+
+</div>
+</div>
+ </center>

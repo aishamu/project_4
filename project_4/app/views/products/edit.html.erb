@@ -1,0 +1,47 @@
+
+<center>
+<div class="container">
+<div class="jumbotron">
+<h1> edit products</h1>
+ 
+
+<%= form_for :product , url: product_path(@product), method: :patch do |f| %>
+ 
+    <p>
+          <%= f.label :productname %><br>
+          <%= f.text_field(:productname , {:class => 'form-control'}) %>
+
+    </p>
+    <p>
+          <%= f.label :DanubPrice %><br>
+          <%= f.number_field(:DanubPrice, {:class => 'form-control'}) %>
+
+    </p>
+    <p>
+    <%= f.label :PandaPrice %><br>
+    <%= f.number_field(:PandaPrice, {:class => 'form-control'}) %>
+
+</p>
+ 
+<p>
+<%= f.label :ManualPrice %><br>
+<%= f.number_field(:ManualPrice, {:class => 'form-control'}) %>
+
+</p>
+
+<p>
+<%= f.label :image %><br>
+<%= f.file_field(:avater, {:class => 'form-control'}) %>
+
+</p>
+    <p>
+           <%= f.submit({:class => 'btn btn-primary'}) %>
+
+    </p>
+    <% end %>
+
+
+
+</div>
+</div>
+ </center>
