@@ -10,13 +10,13 @@
 <% @product.each do |product| %>
     <div class="well">
        <h3>Product Name <%= product.productname %></h3>
-       <p>Image <%= product.image %></p>
+       <p> <%= image_tag(product.image) %></p>
        <p>Panda Price <%= product.PandaPrice %></p>
        <p>Danub Price <%= product.DanubPrice %></p>
        <p>Manual Price <%= product.ManualPrice %></p>
 
        
-       <%= link_to "read more" , product_path(product), :class => 'btn btn-default' %>
+       <%= link_to "Details " , product_path(product), :class => 'btn btn-default' %>
    </div>
   
        <% end %>  </div>
