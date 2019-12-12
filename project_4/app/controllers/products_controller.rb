@@ -1,6 +1,7 @@
 class ProductsController < ApplicationController
     def index
         @product = Product.all
+
     
     end
     def new
@@ -8,7 +9,10 @@ class ProductsController < ApplicationController
     
     end
     def show
-        @product =Product.find(params[:id])
+    
+            @product =Product.find(params[:id])
+
+
     end
 
 
@@ -42,10 +46,11 @@ class ProductsController < ApplicationController
         redirect_to products_path
     
     end
-    
+
+ 
     private 
     def product_params
-        params.require(:product).permit(:productname,:DanubPrice,:PandaPrice,:ManualPrice,:image)
+        params.require(:product).permit(:productname,:DanubPrice,:PandaPrice,:ManualPrice,:image, :product_type)
     end
     
     

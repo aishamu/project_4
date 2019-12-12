@@ -13,6 +13,10 @@
 
     </p>
     <p>
+          <%= f.label :product_type%><br>
+          <%= f.select :product_type, ['dairy', 'meat','fruitsVagetabels','home'] %>
+    </p>
+    <p>
           <%= f.label :DanubPrice %><br>
           <%= f.number_field(:DanubPrice, {:class => 'form-control'}) %>
 
