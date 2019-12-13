@@ -1,2 +1,7 @@
 class MeatsController < ApplicationController
-end
+
+    def index
+        @product = Product.all
+    end
+    end
+    
